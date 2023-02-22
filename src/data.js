@@ -14,7 +14,7 @@ let data = [
   {
     id: 1,
     title: "니트",
-    content: "흰색 니트",
+    content: "보라 니트",
     price: 110000,
     img: sample1,
   },
