@@ -1,22 +1,20 @@
+import { Row, Container, Carousel } from "react-bootstrap";
 
-import {Row, Container } from "react-bootstrap";
 import Item from "../components/Item.js";
-const Main = ({items, setId}) =>{
-
-    return (
-        <>
-          <div className="main-bg"></div>
+import Slider from "../components/Slider";
+const Main = ({ items }) => {
+  return (
+    <>
+      <Slider />
       <Container>
         <Row>
           {items.map((item, idx) => {
-            return <Item setId={setId} item={item} />;
+            return <Item item={item} />;
           })}
         </Row>
       </Container>
-        </>
-    )
+    </>
+  );
+};
 
-}
-
-
-export default Main
+export default Main;
