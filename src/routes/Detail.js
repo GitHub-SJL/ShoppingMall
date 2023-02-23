@@ -1,16 +1,30 @@
 import Button from "react-bootstrap/Button";
 import Figure from "react-bootstrap/Figure";
 import { useParams } from "react-router-dom";
+import styled from "styled-components";
 
 const Detail = ({ items }) => {
   let { id } = useParams(null);
 
   const item = items.find((item) => item.id === Number(id));
 
+  let YellowBtn = styled.button`
+    background: yellow;
+    color : black;
+    padding : 10px;
+  `
+  let Box = styled.div`
+    background: grey;
+    padding : 20px;
+
+  `
+
   return (
     <>
       {item ? (
         <div className="container">
+          <YellowBtn>버튼</YellowBtn>
+          <Box>박스</Box>
           <div className="row">
             <Figure>
               <Figure.Image

@@ -1,9 +1,11 @@
-import { Row, Container } from "react-bootstrap";
+import { Row, Container, Carousel } from "react-bootstrap";
+
 import Item from "../components/Item.js";
+import Slider from "../components/Slider";
 const Main = ({ items }) => {
   return (
     <>
-      <div className="main-bg"></div>
+      <Slider />
       <Container>
         <Row>
           {items.map((item, idx) => {
