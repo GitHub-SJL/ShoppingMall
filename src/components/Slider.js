@@ -112,7 +112,7 @@ function Slider() {
     if (isSlide) {
       return;
     }
-    setX(-56);
+    setX(-44);
     setIsSlide(true);
     await setTimeout(() => {
       setIndex((prev) => (prev === 8 ? 0 : prev + 1));
@@ -125,7 +125,7 @@ function Slider() {
     if (isSlide) {
       return;
     }
-    setX(+56);
+    setX(+44);
     setIsSlide(true);
     await setTimeout(() => {
       setIndex((prev) => (prev === 0 ? 8 : prev - 1));
@@ -180,20 +180,20 @@ function Slider() {
     };
   }, []);
 
-  useEffect(() => {
-    const autoPage = setTimeout(() => {
-      setX(-56);
-      setIsSlide(true);
-      setTimeout(() => {
-        setIndex((prev) => (prev === 8 ? 0 : prev + 1));
-        setX(0);
-        setIsSlide(false);
-      }, 500);
-    }, 5000);
-    return () => {
-      clearTimeout(autoPage);
-    };
-  }, [index, isClick]);
+//   useEffect(() => {
+//     const autoPage = setTimeout(() => {
+//       setX(-44);
+//       setIsSlide(true);
+//       setTimeout(() => {
+//         setIndex((prev) => (prev === 8 ? 0 : prev + 1));
+//         setX(0);
+//         setIsSlide(false);
+//       }, 500);
+//     }, 6000);
+//     return () => {
+//       clearTimeout(autoPage);
+//     };
+//   }, [index, isClick]);
   console.log(`브라우저 사이즈 : ${windowWidth}`);
   return (
     <Wrapper>
