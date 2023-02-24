@@ -14,6 +14,7 @@ import btn_slide_next from "../img/btn/btn_slide_next.png";
 import btn_slide_prev from "../img/btn/btn_slide_prev.png";
 
 const Wrapper = styled.div`
+  width: 100%;
   margin: 22px 0px;
   display: flex;
   overflow-x: hidden;
@@ -180,20 +181,20 @@ function Slider() {
     };
   }, []);
 
-//   useEffect(() => {
-//     const autoPage = setTimeout(() => {
-//       setX(-44);
-//       setIsSlide(true);
-//       setTimeout(() => {
-//         setIndex((prev) => (prev === 8 ? 0 : prev + 1));
-//         setX(0);
-//         setIsSlide(false);
-//       }, 500);
-//     }, 6000);
-//     return () => {
-//       clearTimeout(autoPage);
-//     };
-//   }, [index, isClick]);
+  //   useEffect(() => {
+  //     const autoPage = setTimeout(() => {
+  //       setX(-44);
+  //       setIsSlide(true);
+  //       setTimeout(() => {
+  //         setIndex((prev) => (prev === 8 ? 0 : prev + 1));
+  //         setX(0);
+  //         setIsSlide(false);
+  //       }, 500);
+  //     }, 6000);
+  //     return () => {
+  //       clearTimeout(autoPage);
+  //     };
+  //   }, [index, isClick]);
   console.log(`브라우저 사이즈 : ${windowWidth}`);
   return (
     <Wrapper>
